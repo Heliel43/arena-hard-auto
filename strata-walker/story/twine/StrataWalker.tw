@@ -1,0 +1,130 @@
+:: StoryTitle
+The Strata Walker
+
+:: StoryData
+{
+  "ifid": "A1B2C3D4-1234-5678-9ABC-DEF012345678",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Start"
+}
+
+:: Start
+(set: $insight to 1)
+(set: $resolve to 1)
+(set: $guile to 1)
+(set: $bond to 0)
+(set: $flags to (dm:))
+(set: $relics to (a:))
+(set: $c_oath to 0)
+(set: $c_mistress to 0)
+(set: $c_arcanist to 0)
+(set: $c_spirit to 0)
+(set: $c_trick to 0)
+(set: $c_lantern to 0)
+(set: $c_forge to 0)
+(set: $c_caretaker to 0)
+(set: $c_president to 0)
+
+# THE STRATA WALKER
+
+A world-hopping tale rebuilt from a fanfiction source. Every character, place, and name here is original.
+
+Insight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)
+
+[[Begin->Awakening]]
+
+:: Awakening
+The ceiling of Cinderhall Academy's east hall wore a crack shaped like a half-asked question. You'd counted its branches often enough to know it by heart — which was exactly how you noticed you weren't entirely inside your own skull.
+
+Foreign thoughts again. Too solid to be daydreams. A *silver tide* at the corner of your sight, there and gone, and the stubborn impression that you'd stood on a shore that did not exist, watching a moon that *burned* instead of shone.
+
+"You're wanted in the President's office, delegate."
+
+The prefect didn't wait for an answer. President Vey's summons were never requests. You went.
+
+---
+
+President Vey didn't look up from her ledgers. "Your petition to join the Greywater expedition was denied."
+
+"I — what petition? I never —"
+
+"Your sponsor did. The one who enrolled you. He revoked it this morning." She finally met your eyes. "You have a sponsor. You've never mentioned him. Neither have we, because the name is sealed."
+
+A sponsor. The man — if he was a man — who paid your tuition and signed you in three years ago and then vanished. The one the caretaker Madsen answers to. The one whose contempt you'd only ever felt secondhand, through her.
+
+"What does he care if I go to Greywater?"
+
+"That," Vey said, "is precisely the question I'm not permitted to answer."
+
+[[Demand he be contacted->ConfrontVey]]
+[[Let it go, for now->Home]]
+
+:: ConfrontVey
+"I'm not a child under lock and key," you said. "If someone's making decisions about my life, I want the line open."
+
+Vey's pen stilled. For a breath you thought she might actually respect it.
+
+"I'll note your objection," she said, and you knew that was all you'd get. "But the seal holds, delegate. Whatever he is, he outranks this school."
+
+(set: $resolve to it + 1)
+(set: $flags to $flags + (dm: "confronted_vey", true))
+
+The walk home felt longer than usual. The silver tide lapped at the edges of everything.
+
+[[Continue->Home]]
+
+:: Home
+The house was empty, the way it always was. Madsen would come by in a few days — let herself in, sweep the rooms with that measuring look, and leave without saying whether your sponsor was pleased.
+
+You dropped your bag. The silver tide was *wider* now, a seam of light along the baseboard, and behind it —
+
+A shore. A burning moon. A voice that wasn't yours, asking if you were ready to *see*.
+
+What do you do?
+
+[[Slam the door on it. Go to the workshop and lose yourself in the engines.->Workshop]]
+[[Sit with the silence and try to remember the shore.->Shore]]
+[[Steel yourself to corner Madsen next time and force the truth.->Oath]]
+
+:: Workshop
+You threw yourself into the half-built engine, bolts and blueprints a wall against the impossible. It almost worked. Almost.
+
+But your hands kept drawing the same symbol — a lattice of eyes, each one a window onto a different sky.
+
+(set: $guile to it + 1)
+(set: $flags to $flags + (dm: "workshop", true))
+
+[[The seam opens->TheSeam]]
+
+:: Shore
+You let the silence in. The shore rose around you — ash-white sand, a tide of liquid silver, and a moon that burned without heat. Somewhere in that vision, a door with your name on it stood ajar.
+
+(set: $insight to it + 1)
+(set: $flags to $flags + (dm: "shore", true))
+
+[[The seam opens->TheSeam]]
+
+:: Oath
+You would not be managed by ghosts. The next time Madsen's key turned in the lock, you'd be waiting — and this time she'd answer, or you'd walk out the door and never come back.
+
+(set: $resolve to it + 1)
+(set: $flags to $flags + (dm: "oath", true))
+
+[[The seam opens->TheSeam]]
+
+:: TheSeam
+The seam along the baseboard *opened*.
+
+Not a crack in the plaster. A window. Through it: a version of Cinderhall where the halls were made of frozen music, and something vast and patient turned its attention toward you.
+
+You were Prismborn. You'd always been Prismborn. The only question left was which Strata you'd fall into first.
+
+Insight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)
+
+[[Return to the beginning->Start]]
+
+:: Codex
+(story metadata — internal)
+This passage is a placeholder for the in-game Codex (companions, Strata, relics).
+It is not shipped content; see design/ for the source tables.

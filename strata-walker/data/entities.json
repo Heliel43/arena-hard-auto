@@ -1,0 +1,221 @@
+[
+  {
+    "term": "Kaleidoscope",
+    "type": "glossary",
+    "franchise": "Fate/Type-Moon",
+    "role": "Protagonist's dimension-sight power (also the story title)",
+    "action": "replace",
+    "suggested": "Prism-sight / the Strata",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Holy Grail",
+    "type": "glossary",
+    "franchise": "Fate",
+    "role": "Wish-granter relic",
+    "action": "replace",
+    "suggested": "world-binding relic",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Grail War",
+    "type": "glossary",
+    "franchise": "Fate",
+    "role": "Faction war over the relic",
+    "action": "replace",
+    "suggested": "relic-war",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Fuyuki",
+    "type": "glossary",
+    "franchise": "Fate",
+    "role": "City of the Grail War",
+    "action": "replace",
+    "suggested": "[re-skin needed]",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Chaldea",
+    "type": "glossary",
+    "franchise": "Fate/Grand Order",
+    "role": "Organization / school",
+    "action": "replace",
+    "suggested": "Drowned Archive",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Souna Shitori",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "Student council president",
+    "action": "replace",
+    "suggested": "President Vey",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Sitri",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "Her devil house",
+    "action": "replace",
+    "suggested": "[re-skin needed]",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Kuoh Academy",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "The school",
+    "action": "replace",
+    "suggested": "Cinderhall Academy",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Kuoh",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "The town",
+    "action": "replace",
+    "suggested": "Aurel",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Hyoudou Issei",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "Canon perverted protagonist ('the Idiot')",
+    "action": "replace",
+    "suggested": "[DROP]",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Issei",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "Canon protagonist short name",
+    "action": "replace",
+    "suggested": "[DROP]",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Yasaka",
+    "type": "glossary",
+    "franchise": "High School DxD",
+    "role": "Youkai (fox) leader",
+    "action": "replace",
+    "suggested": "Spirit Sovereign",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Roman Torchwick",
+    "type": "glossary",
+    "franchise": "RWBY",
+    "role": "Trickster thief",
+    "action": "replace",
+    "suggested": "Trickster",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Salem",
+    "type": "glossary",
+    "franchise": "RWBY",
+    "role": "Immortal antagonist",
+    "action": "replace",
+    "suggested": "the Unmaking",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Jinn",
+    "type": "glossary",
+    "franchise": "RWBY",
+    "role": "Wish-granting spirit",
+    "action": "replace",
+    "suggested": "Lantern-Bearer",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Meridia",
+    "type": "glossary",
+    "franchise": "Elder Scrolls",
+    "role": "Light Daedric prince",
+    "action": "replace",
+    "suggested": "Forge-Mother",
+    "count": 1,
+    "first_chapter": 0,
+    "chapters": [
+      0
+    ]
+  },
+  {
+    "term": "Shimoda",
+    "type": "unknown",
+    "franchise": "",
+    "role": "",
+    "action": "review",
+    "suggested": "",
+    "count": 3,
+    "first_chapter": -1,
+    "chapters": []
+  }
+]

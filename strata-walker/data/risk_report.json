@@ -1,0 +1,46 @@
+[
+  {
+    "chapter": "fixture.txt",
+    "flagged_count": 6,
+    "samples": [
+      {
+        "sentence": "Shimoda-san met Souna Shitori in the hallway of Kuoh Academy.",
+        "terms": [
+          "Souna Shitori",
+          "Kuoh Academy",
+          "Kuoh"
+        ]
+      },
+      {
+        "sentence": "The Sitri heir mentioned a dragon in his soul and laughed about Hyoudou Issei, the Idiot of the school.",
+        "terms": [
+          "Sitri",
+          "Hyoudou Issei",
+          "Issei"
+        ]
+      },
+      {
+        "sentence": "Vampires and a red moon kept appearing in Shimoda's dreams, and the Kaleidoscope power was beginning to wake.",
+        "terms": [
+          "Kaleidoscope"
+        ]
+      },
+      {
+        "sentence": "Later, Yasaka spoke of the old pacts, and Roman Torchwick grinned from the rafters while Salem watched from the dark.",
+        "terms": [
+          "Yasaka",
+          "Roman Torchwick",
+          "Salem"
+        ]
+      },
+      {
+        "sentence": "Jinn offered a single answer, and Meridia's light filled the drowned hall of Chaldea.",
+        "terms": [
+          "Chaldea",
+          "Jinn",
+          "Meridia"
+        ]
+      }
+    ]
+  }
+]
