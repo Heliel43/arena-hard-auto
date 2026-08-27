@@ -43,6 +43,7 @@ strata-walker/
     04-recombination.md     # method + act map decoupled from source order
     05-decisions.md         # locked creative and workflow decisions
     06-plot-outline.md      # mysteries, acts, interludes, endings
+    07-branching-production.md # story-first workflow and branch budget
   data/
     incoming/               # local-only source; ignored by Git
   story/
@@ -65,6 +66,7 @@ python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
 ## Current production target
-Revise Act 0 around ordinary American life, a pre-Door investigation, a public Bleed at
-Aurel Exchange, and a voluntary first crossing. Then build the Sundered Court vertical
-slice before processing more source material.
+Treat the playable Act 0 as a prototype and pause engine expansion. Following
+`design/07-branching-production.md`, the next deliverable is a 35–45 chapter master story
+spine from the opening through all ending routes. Approve that general story before drafting
+Act I branches or adding more gameplay systems.

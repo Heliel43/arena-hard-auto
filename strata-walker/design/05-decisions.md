@@ -56,7 +56,11 @@ Work by named arc or dramatic need rather than trying to convert every chapter:
 Mechanical renaming is never treated as a finished conversion.
 
 ## Immediate production order
-1. Rewrite Act 0 around American Earth and the pre-Door investigation.
-2. Mine source-bank beats for Act I without following source order.
-3. Build a complete Sundered Court vertical slice.
-4. Review tone, names, choice density, and consequences before expanding.
+1. Keep the revised Act 0 as a playable prototype; do not expand the engine yet.
+2. Lock original cast identities, magical rules, sponsor motive, and ending costs.
+3. Write a 35–45 chapter master spine covering the complete general story.
+4. Overlay companion arcs and setup/payoff dependencies.
+5. Review and approve the spine.
+6. Draft the common Act I trunk, then add classified choices under
+   `design/07-branching-production.md`.
+7. Return to engine and interface work only when the story requires specific support.
