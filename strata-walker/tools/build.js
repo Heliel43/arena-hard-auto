@@ -66,10 +66,20 @@ try {
     const out = eng.renderHTML(name);
     if (typeof out !== 'string') throw new Error('renderHTML did not return string for ' + name);
   }
-  // exercise a branch: ConfrontVey -> Home -> Workshop -> TheSeam
+  // Reset after the all-passage smoke test, then exercise relationship and stat choices.
+  const startHTML = eng.renderHTML('Start');
   eng.renderHTML('ConfrontVey');
+  eng.renderHTML('Oath');
   const st = eng.getState();
-  console.log('Self-test OK. Sample state after ConfrontVey:', JSON.stringify({ resolve: st.resolve, flags: st.flags }));
+  if (st.c_president !== 1) throw new Error('ConfrontVey should raise the President relationship');
+  if (st.endurance !== 2) throw new Error('Oath should raise Endurance from E to D');
+  for (const key of ['strength', 'agility', 'mana', 'luck']) {
+    if (st[key] !== 1) throw new Error(key + ' should remain at rank E');
+  }
+  if (!startHTML.includes('Strength:') || !startHTML.includes('Luck:')) {
+    throw new Error('letter-rank stat line did not render');
+  }
+  console.log('Self-test OK. Sample state:', JSON.stringify({ endurance: st.endurance, president: st.c_president, flags: st.flags }));
 } catch (e) {
   console.error('Self-test FAILED:', e && e.stack ? e.stack : e);
   process.exitCode = 1;

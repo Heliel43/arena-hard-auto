@@ -356,12 +356,17 @@
     }
 
     function statusBar() {
-      const g = (n) => (typeof state[n] === 'number' ? state[n] : (state[n] ? state[n] : 0));
+      const rank = (n) => {
+        const value = Number(state[n]);
+        if (!Number.isFinite(value)) return '—';
+        return ['—', 'E', 'D', 'C', 'B', 'A'][Math.max(1, Math.min(5, Math.trunc(value)))];
+      };
       const relicN = Array.isArray(state.relics) ? state.relics.length : 0;
       let companions = '';
       const cmap = { c_oath: 'Oathkeeper', c_mistress: 'Mistress', c_arcanist: 'Arcanist', c_spirit: 'Spirit', c_trick: 'Trickster', c_lantern: 'Lantern', c_forge: 'Forge', c_caretaker: 'Caretaker', c_president: 'President' };
       for (const k in cmap) { const v = state[k]; if (typeof v === 'number' && v !== 0) companions += ' · ' + cmap[k] + ' ' + (v > 0 ? '+' : '') + v; }
-      return '<div class="status">Insight ' + g('insight') + ' · Resolve ' + g('resolve') + ' · Guile ' + g('guile') + ' · Bond ' + g('bond') +
+      return '<div class="status">Strength ' + rank('strength') + ' · Endurance ' + rank('endurance') +
+        ' · Agility ' + rank('agility') + ' · Mana ' + rank('mana') + ' · Luck ' + rank('luck') +
         (relicN ? ' · Relics ' + relicN : '') + companions + '</div>';
     }
 

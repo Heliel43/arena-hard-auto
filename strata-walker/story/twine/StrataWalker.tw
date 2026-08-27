@@ -10,10 +10,11 @@ The Strata Walker
 }
 
 :: Start
-(set: $insight to 1)
-(set: $resolve to 1)
-(set: $guile to 1)
-(set: $bond to 0)
+(set: $strength to 1)
+(set: $endurance to 1)
+(set: $agility to 1)
+(set: $mana to 1)
+(set: $luck to 1)
 (set: $flags to (dm:))
 (set: $relics to (a:))
 (set: $c_oath to 0)
@@ -30,7 +31,7 @@ The Strata Walker
 
 A world-hopping tale rebuilt from a fanfiction source. Every character, place, and name here is original.
 
-Insight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)
+Strength: (if: $strength is 1)[E](elseif: $strength is 2)[D](elseif: $strength is 3)[C](elseif: $strength is 4)[B](else:)[A] · Endurance: (if: $endurance is 1)[E](elseif: $endurance is 2)[D](elseif: $endurance is 3)[C](elseif: $endurance is 4)[B](else:)[A] · Agility: (if: $agility is 1)[E](elseif: $agility is 2)[D](elseif: $agility is 3)[C](elseif: $agility is 4)[B](else:)[A] · Mana: (if: $mana is 1)[E](elseif: $mana is 2)[D](elseif: $mana is 3)[C](elseif: $mana is 4)[B](else:)[A] · Luck: (if: $luck is 1)[E](elseif: $luck is 2)[D](elseif: $luck is 3)[C](elseif: $luck is 4)[B](else:)[A]
 
 [[Begin->Awakening]]
 
@@ -67,7 +68,7 @@ Vey's pen stilled. For a breath you thought she might actually respect it.
 
 "I'll note your objection," she said, and you knew that was all you'd get. "But the seal holds, delegate. Whatever he is, he outranks this school."
 
-(set: $resolve to it + 1)
+(set: $c_president to it + 1)
 (set: $flags to $flags + (dm: "confronted_vey", true))
 
 The walk home felt longer than usual. The silver tide lapped at the edges of everything.
@@ -92,7 +93,7 @@ You threw yourself into the half-built engine, bolts and blueprints a wall again
 
 But your hands kept drawing the same symbol — a lattice of eyes, each one a window onto a different sky.
 
-(set: $guile to it + 1)
+(set: $agility to it + 1)
 (set: $flags to $flags + (dm: "workshop", true))
 
 [[The seam opens->TheSeam]]
@@ -100,7 +101,7 @@ But your hands kept drawing the same symbol — a lattice of eyes, each one a wi
 :: Shore
 You let the silence in. The shore rose around you — ash-white sand, a tide of liquid silver, and a moon that burned without heat. Somewhere in that vision, a door with your name on it stood ajar.
 
-(set: $insight to it + 1)
+(set: $mana to it + 1)
 (set: $flags to $flags + (dm: "shore", true))
 
 [[The seam opens->TheSeam]]
@@ -108,7 +109,7 @@ You let the silence in. The shore rose around you — ash-white sand, a tide of 
 :: Oath
 You would not be managed by ghosts. The next time Madsen's key turned in the lock, you'd be waiting — and this time she'd answer, or you'd walk out the door and never come back.
 
-(set: $resolve to it + 1)
+(set: $endurance to it + 1)
 (set: $flags to $flags + (dm: "oath", true))
 
 [[The seam opens->TheSeam]]
@@ -120,7 +121,7 @@ Not a crack in the plaster. A window. Through it: a version of Cinderhall where 
 
 You were Prismborn. You'd always been Prismborn. The only question left was which Strata you'd fall into first.
 
-Insight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)
+Strength: (if: $strength is 1)[E](elseif: $strength is 2)[D](elseif: $strength is 3)[C](elseif: $strength is 4)[B](else:)[A] · Endurance: (if: $endurance is 1)[E](elseif: $endurance is 2)[D](elseif: $endurance is 3)[C](elseif: $endurance is 4)[B](else:)[A] · Agility: (if: $agility is 1)[E](elseif: $agility is 2)[D](elseif: $agility is 3)[C](elseif: $agility is 4)[B](else:)[A] · Mana: (if: $mana is 1)[E](elseif: $mana is 2)[D](elseif: $mana is 3)[C](elseif: $mana is 4)[B](else:)[A] · Luck: (if: $luck is 1)[E](elseif: $luck is 2)[D](elseif: $luck is 3)[C](elseif: $luck is 4)[B](else:)[A]
 
 [[Return to the beginning->Start]]
 
