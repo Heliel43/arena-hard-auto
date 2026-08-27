@@ -348,6 +348,7 @@
           continue;
         }
         let h = escHtml(t);
+        h = h.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         h = h.replace(/\*([^*]+)\*/g, '<em>$1</em>');
         h = h.replace(/_([^_]+)_/g, '<em>$1</em>');
         out.push('<p>' + h + '</p>');

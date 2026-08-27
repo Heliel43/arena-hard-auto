@@ -29,103 +29,596 @@ The Strata Walker
 
 # THE STRATA WALKER
 
-A world-hopping tale rebuilt from a fanfiction source. Every character, place, and name here is original.
+## Act 0 — The Bleed
+
+Aurel, Pennsylvania. A river city of steep streets, dead furnaces, expensive schools, and one door that should not exist.
 
 Strength: (if: $strength is 1)[E](elseif: $strength is 2)[D](elseif: $strength is 3)[C](elseif: $strength is 4)[B](else:)[A] · Endurance: (if: $endurance is 1)[E](elseif: $endurance is 2)[D](elseif: $endurance is 3)[C](elseif: $endurance is 4)[B](else:)[A] · Agility: (if: $agility is 1)[E](elseif: $agility is 2)[D](elseif: $agility is 3)[C](elseif: $agility is 4)[B](else:)[A] · Mana: (if: $mana is 1)[E](elseif: $mana is 2)[D](elseif: $mana is 3)[C](elseif: $mana is 4)[B](else:)[A] · Luck: (if: $luck is 1)[E](elseif: $luck is 2)[D](elseif: $luck is 3)[C](elseif: $luck is 4)[B](else:)[A]
 
-[[Begin->Awakening]]
+[[Begin->OrdinaryDay]]
 
-:: Awakening
-The ceiling of Cinderhall Academy's east hall wore a crack shaped like a half-asked question. You'd counted its branches often enough to know it by heart — which was exactly how you noticed you weren't entirely inside your own skull.
+:: OrdinaryDay
+The last period bell should have released you seven minutes ago. Instead, Mr. Lyle is explaining municipal bond debt to eighteen seniors who have already mastered the subtler art of staring through him.
 
-Foreign thoughts again. Too solid to be daydreams. A *silver tide* at the corner of your sight, there and gone, and the stubborn impression that you'd stood on a shore that did not exist, watching a moon that *burned* instead of shone.
+You stare at the ceiling.
 
-"You're wanted in the President's office, delegate."
+A crack above the projector forks into five pale lines. You have seen it every weekday since August. Today, its reflection in the dark window forks into six.
 
-The prefect didn't wait for an answer. President Vey's summons were never requests. You went.
+You blink. Five again.
 
----
+For the past week, ordinary things have carried small disagreements. A traffic light remembers being blue. Your kitchen has the shadow of a second doorway after midnight. Yesterday you knew—absolutely knew—the route through a neighborhood where you have never lived.
 
-President Vey didn't look up from her ledgers. "Your petition to join the Greywater expedition was denied."
+Lack of sleep would be comforting. Lack of sleep has a treatment.
 
-"I — what petition? I never —"
+The classroom empties around you. A girl in a navy Cinderhall blazer waits beside your desk.
 
-"Your sponsor did. The one who enrolled you. He revoked it this morning." She finally met your eyes. "You have a sponsor. You've never mentioned him. Neither have we, because the name is sealed."
+“President Vey wants you in the council office.”
 
-A sponsor. The man — if he was a man — who paid your tuition and signed you in three years ago and then vanished. The one the caretaker Madsen answers to. The one whose contempt you'd only ever felt secondhand, through her.
+“Did she say why?”
 
-"What does he care if I go to Greywater?"
+“No. She did say now.”
 
-"That," Vey said, "is precisely the question I'm not permitted to answer."
+That sounds like Vey.
 
-[[Demand he be contacted->ConfrontVey]]
-[[Let it go, for now->Home]]
+[[Answer the summons->VeyOffice]]
+
+:: VeyOffice
+The student council office overlooks Cinderhall's football field, the Monongahela beyond it, and the brick remains of Aurel's east mills. President Mara Vey stands at the window with a folder pressed shut beneath one hand.
+
+“You were selected for the Greywater field study,” she says.
+
+Greywater Observatory has been closed since before you were born. Cinderhall still sends a few seniors each year to catalog equipment for the county museum.
+
+“I didn't apply.”
+
+“I know.” Vey turns the folder toward you. Your name sits above a signature you do not recognize. “Your sponsor applied for you six months ago. This morning he ordered us to remove you.”
+
+The anonymous sponsor paid your tuition, bought the narrow house where you live alone, and employed Madsen to confirm periodically that you remain alive. He has never sent a birthday card. Apparently he can plan your field trips half a year in advance.
+
+“You contacted him?”
+
+“He contacted us.” Vey's expression tightens. “His order was filed three minutes before the final participant list existed.”
+
+There are several reasonable responses to that. None reach your mouth.
+
+[[Demand a name and a direct line->ConfrontVey]]
+[[Ask what happened at Greywater this morning->QuestionGreywater]]
+[[Take a picture of the folder and leave->LeaveOffice]]
 
 :: ConfrontVey
-"I'm not a child under lock and key," you said. "If someone's making decisions about my life, I want the line open."
-
-Vey's pen stilled. For a breath you thought she might actually respect it.
-
-"I'll note your objection," she said, and you knew that was all you'd get. "But the seal holds, delegate. Whatever he is, he outranks this school."
-
 (set: $c_president to it + 1)
 (set: $flags to $flags + (dm: "confronted_vey", true))
 
-The walk home felt longer than usual. The silver tide lapped at the edges of everything.
+“If someone can volunteer me and veto me, I get to know who he is.”
 
-[[Continue->Home]]
+For one breath, Vey looks less like an administrator and more like another senior who has inherited a problem much older than either of you.
 
-:: Home
-The house was empty, the way it always was. Madsen would come by in a few days — let herself in, sweep the rooms with that measuring look, and leave without saying whether your sponsor was pleased.
+“His identity is sealed above the school board,” she says. “I tried.”
 
-You dropped your bag. The silver tide was *wider* now, a seam of light along the baseboard, and behind it —
+“Try louder.”
 
-A shore. A burning moon. A voice that wasn't yours, asking if you were ready to *see*.
+The corner of her mouth almost moves. “The order wasn't concerned with the trip. It used the word *proximity*.”
 
-What do you do?
+Before you can press her, every phone in the office vibrates at once. No alert appears.
 
-[[Slam the door on it. Go to the workshop and lose yourself in the engines.->Workshop]]
-[[Sit with the silence and try to remember the shore.->Shore]]
-[[Steel yourself to corner Madsen next time and force the truth.->Oath]]
+[[Leave the office->OutsideSchool]]
 
-:: Workshop
-You threw yourself into the half-built engine, bolts and blueprints a wall against the impossible. It almost worked. Almost.
+:: QuestionGreywater
+(set: $flags to $flags + (dm: "knows_greywater", true))
 
-But your hands kept drawing the same symbol — a lattice of eyes, each one a window onto a different sky.
+“What happened at the observatory?”
 
-(set: $agility to it + 1)
-(set: $flags to $flags + (dm: "workshop", true))
+Vey taps a photograph out of the folder. The telescope dome is open beneath a clear morning sky. In every window, however, night presses against the glass. A swollen moon burns above unfamiliar constellations.
 
-[[The seam opens->TheSeam]]
+“The county says corrupted camera data,” she says.
 
-:: Shore
-You let the silence in. The shore rose around you — ash-white sand, a tide of liquid silver, and a moon that burned without heat. Somewhere in that vision, a door with your name on it stood ajar.
+“And you?”
 
-(set: $mana to it + 1)
-(set: $flags to $flags + (dm: "shore", true))
+“I think your sponsor knew what the camera would see.”
 
-[[The seam opens->TheSeam]]
+Every phone in the office vibrates at once. No alert appears.
 
-:: Oath
-You would not be managed by ghosts. The next time Madsen's key turned in the lock, you'd be waiting — and this time she'd answer, or you'd walk out the door and never come back.
+[[Leave the office->OutsideSchool]]
 
+:: LeaveOffice
+(set: $flags to $flags + (dm: "photographed_order", true))
+
+You photograph both pages before Vey can object.
+
+The first image looks normal. In the second, the signature has changed to your handwriting.
+
+When you look back at the paper, it has not.
+
+Every phone in the office vibrates at once. No alert appears.
+
+[[Leave the office->OutsideSchool]]
+
+:: OutsideSchool
+October sunlight lies warm across Cinderhall's red-brick courtyard. Beyond the iron fence, school buses growl into traffic and the marching band murders the same eight measures for the fourth time.
+
+Everything is painfully American and ordinary.
+
+Then your phone displays a message from Madsen.
+
+*Go directly home. Lock the doors. Cover every mirror. If someone inside the house calls in your mother's voice, do not answer.*
+
+Madsen has sent you eleven messages in three years. Eight were appointment times. Two were instructions for signing tax forms. One said *Move away from the window* ten seconds before a branch came through it.
+
+Across the courtyard, Vey leaves through a staff gate instead of joining the buses. She is heading east, toward Greywater and the old rail exchange.
+
+In the trophy-case glass, your reflection remains beside the office door.
+
+It raises one finger to its lips.
+
+You have time to make one decision before the city begins to change.
+
+[[Obey Madsen and prepare the house->AtHome]]
+[[Follow Vey through the staff gate->FollowVey]]
+[[Go home and search your mother's locked case->MothersCase]]
+[[Approach the reflection that stayed behind->Reflection]]
+
+:: AtHome
+(set: $flags to $flags + (dm: "obeyed_madsen", true))
+
+Your house stands on a narrow Aurel hillside where every backyard threatens to fall into the next. You lock the front door, draw the curtains, and cover the mirrors with towels.
+
+The basement window shows a second basement on the other side of the glass. In that room, someone is climbing the stairs.
+
+Madsen said to prepare. She did not specify how.
+
+[[Drag the workbench against the basement door->BraceHouse]]
+[[Sit in front of the door and refuse to answer the voice->HoldFast]]
+
+:: BraceHouse
+(set: $strength to it + 1)
+(set: $flags to $flags + (dm: "braced_house", true))
+
+The workbench is cast iron, bolted to rotting boards, and loaded with every tool you have failed to put away. You wrench the bolts free and drive the whole groaning weight across the floor.
+
+**Strength rises to D.**
+
+The basement door strikes the bench once.
+
+Your mother's voice says your childhood nickname from the other side.
+
+The city sirens begin before it can knock again.
+
+[[Listen to the emergency alert->AurelBreaks]]
+
+:: HoldFast
 (set: $endurance to it + 1)
-(set: $flags to $flags + (dm: "oath", true))
+(set: $flags to $flags + (dm: "resisted_voice", true))
 
-[[The seam opens->TheSeam]]
+You sit with your back against the basement door while the impossible voice remembers things no stranger should know. It apologizes. It cries. It promises that opening the door will make you a child again.
 
-:: TheSeam
-The seam along the baseboard *opened*.
+You keep it closed.
 
-Not a crack in the plaster. A window. Through it: a version of Cinderhall where the halls were made of frozen music, and something vast and patient turned its attention toward you.
+**Endurance rises to D.**
 
-You were Prismborn. You'd always been Prismborn. The only question left was which Strata you'd fall into first.
+After nine minutes, the voice stops. The city sirens take its place.
 
-Strength: (if: $strength is 1)[E](elseif: $strength is 2)[D](elseif: $strength is 3)[C](elseif: $strength is 4)[B](else:)[A] · Endurance: (if: $endurance is 1)[E](elseif: $endurance is 2)[D](elseif: $endurance is 3)[C](elseif: $endurance is 4)[B](else:)[A] · Agility: (if: $agility is 1)[E](elseif: $agility is 2)[D](elseif: $agility is 3)[C](elseif: $agility is 4)[B](else:)[A] · Mana: (if: $mana is 1)[E](elseif: $mana is 2)[D](elseif: $mana is 3)[C](elseif: $mana is 4)[B](else:)[A] · Luck: (if: $luck is 1)[E](elseif: $luck is 2)[D](elseif: $luck is 3)[C](elseif: $luck is 4)[B](else:)[A]
+[[Listen to the emergency alert->AurelBreaks]]
 
-[[Return to the beginning->Start]]
+:: FollowVey
+(set: $agility to it + 1)
+(set: $flags to $flags + (dm: "followed_vey", true))
+
+Vey moves quickly. You cut through the equipment yard, clear a rain-slick wall, and keep her navy blazer in sight through afternoon traffic.
+
+**Agility rises to D.**
+
+She stops above the sealed platforms of Aurel Exchange. From her bag she takes a brass plumb line threaded through a glass bead. The weight points sideways, toward the station wall.
+
+“You are terrible at following people,” she says without turning.
+
+“You are terrible at pretending this is student government.”
+
+The bead fills with silver light. Under the street, something answers with the sound of an arriving train.
+
+The city sirens begin.
+
+[[Descend toward the exchange->AurelBreaks]]
+
+:: MothersCase
+(set: $luck to it + 1)
+(set: $flags to $flags + (dm: "read_mothers_note", true))
+(set: $relics to $relics + (a: "Brass Transit Token"))
+
+Your mother's case has survived three moves and your repeated failure to pick its lock. Today the key is waiting inside your coat pocket.
+
+You have never owned this coat.
+
+**Luck rises to D.**
+
+The case contains old transit maps, a brass token from Aurel Exchange, and a note in your mother's square handwriting:
+
+*If the moon burns, do not let them choose your door.*
+
+No explanation. No signature. On the back, she drew the five-branch crack from your classroom ceiling.
+
+The city sirens begin.
+
+[[Take the token and answer the alert->AurelBreaks]]
+
+:: Reflection
+(set: $mana to it + 1)
+(set: $flags to $flags + (dm: "entered_reflection", true))
+
+You step toward the trophy case. Your reflection steps backward into a corridor that Cinderhall does not have.
+
+You have played *Skyrim*, watched *Fate*, and once let a friend explain *High School DxD* at exhausting length. Fiction has given you an excellent vocabulary for magic. It has provided no useful procedure for negotiating with your own terrified face.
+
+You touch the glass.
+
+Cold power moves through your hand—not electricity, not heat, but capacity. For an instant you feel every reflective surface in Aurel as an unopened eye.
+
+**Mana rises to D.**
+
+Your reflection mouths one word.
+
+*Run.*
+
+The city sirens begin.
+
+[[Pull free and answer the alert->AurelBreaks]]
+
+:: AurelBreaks
+(if: $flags's "followed_vey")[The pavement above Aurel Exchange folds downward without cracking. Vey catches the railing. You catch Vey. Far below, headlights move along tracks abandoned twenty years ago.]
+(if: $flags's "obeyed_madsen")[Every covered mirror in your house begins showing the same abandoned station. The basement door opens inward through the workbench as though the wood and iron have forgotten how to be solid.]
+(if: $flags's "read_mothers_note")[The transit token turns hot. Lines on your mother's map rearrange themselves into a route beginning at your front door and ending beneath Aurel Exchange.]
+(if: $flags's "entered_reflection")[The trophy case becomes a window over Aurel Exchange. In its impossible depth, a Cinderhall shuttle hangs halfway through a concrete pillar.]
+
+Your phone finally displays an emergency alert:
+
+**STRUCTURAL FAILURE — AUREL EXCHANGE. MULTIPLE VEHICLES TRAPPED. AVOID EAST DISTRICT.**
+
+A second message appears beneath it, visible only to you.
+
+*WEST. NOW.* — Madsen
+
+A Cinderhall shuttle is among the trapped vehicles. Vey is either already at the exchange or headed directly into it. Silver lines spread across every dark screen nearby.
+
+[[Follow Madsen's order and get out of Aurel->FleeAurel]]
+[[Go to the exchange and help whoever is trapped->RescueFirst]]
+[[Call Madsen and refuse to move without the truth->DemandTruth]]
+
+:: FleeAurel
+(set: $flags to $flags + (dm: "chose_escape", true))
+(set: $flags to $flags + (dm: "late_to_exchange", true))
+(set: $c_caretaker to it + 1)
+
+You head west.
+
+This is not cowardice, you tell yourself. Structural collapse is a job for firefighters, not seniors with complicated tuition arrangements. Madsen has known when danger was coming before. For once, following instructions might be intelligence.
+
+Three blocks later, you pass the same burned-out pharmacy again.
+
+On the fourth loop, every road west deposits you at the barricades outside Aurel Exchange.
+
+Madsen waits beneath a dead traffic light in a charcoal coat. “I wondered how many repetitions it would take.”
+
+“You could have mentioned the city wouldn't let me leave.”
+
+“The city is not doing this.” Her measuring stare settles on you. “You are.”
+
+[[Enter the exchange with her->StationApproach]]
+
+:: RescueFirst
+(set: $flags to $flags + (dm: "chose_rescue", true))
+
+You go east.
+
+Emergency crews crowd the upper entrance to Aurel Exchange, but their radios repeat messages from several minutes in the future. A paramedic walks through the same doorway three times and emerges carrying three different injuries.
+
+You slip beneath the barricade before anyone decides which version of you to stop.
+
+Madsen catches your sleeve on the dead escalator. Her charcoal coat is dusted with white chalk, and a line of fresh blood runs from one nostril.
+
+“I told you to leave.”
+
+“There are students down there.”
+
+“There are people everywhere.”
+
+“Excellent. Then you've had practice saving them.”
+
+She releases your sleeve. That is not agreement, but it is enough.
+
+[[Descend together->StationApproach]]
+
+:: DemandTruth
+(set: $flags to $flags + (dm: "bargained_early", true))
+(set: $c_caretaker to it + 1)
+
+Madsen answers on the first ring.
+
+“West,” she says.
+
+“No. Tell me why my sponsor knew about Greywater.”
+
+A long silence. Behind her, you hear stone splitting and someone praying.
+
+“Because Greywater opened this morning,” she says. “Because Cinderhall is opening now. Because he placed you between them and hoped you would remain ordinary.”
+
+“Who is he?”
+
+“The person currently paying me to save your life.”
+
+“Then he can renegotiate.”
+
+Madsen exhales once. “Come to Aurel Exchange. I will answer one question if we survive.”
+
+[[Hold her to it->StationApproach]]
+
+:: StationApproach
+Aurel Exchange exists in at least three conditions at once.
+
+One station is a tiled ruin beneath downtown. One is bright with passengers dressed for a winter that never came. One has no platform at all, only black water reflecting a burning moon.
+
+A Cinderhall shuttle hangs between them. Vey is braced against its open door, lowering students one at a time onto a strip of dependable floor.
+
+Madsen draws a circle across the tiles with chalk and table salt. Blue fire follows her fingers.
+
+“Magic,” she says when she sees your expression. “Use the ordinary word. We do not have time for the accurate one.”
+
+The tunnel convulses. The shuttle drops several inches.
+
+“We seal the rupture now, it stops spreading,” Madsen says. “We attempt the rescue first, it may reach the river.”
+
+[[Go after Vey and the students->ChooseMethod]]
+[[Help Madsen contain the rupture before it spreads->ContainFirst]]
+
+:: ContainFirst
+(set: $flags to $flags + (dm: "contained_first", true))
+(set: $c_caretaker to it + 1)
+(set: $c_president to it - 1)
+
+You step into Madsen's circle.
+
+“Tell me what to do.”
+
+For the first time since you have known her, she looks relieved. She teaches you six words in a language that leaves the taste of copper behind your teeth. You speak while she drives iron nails into the tile.
+
+The black-water version of the station recedes. The rupture shrinks from a tunnel to a doorway.
+
+Behind you, the shuttle falls.
+
+Vey gets most of the students clear. Not all of them come away unhurt. When she meets your eyes across the wreckage, gratitude is not what survives there.
+
+The rupture is contained—but not closed.
+
+[[Approach the remaining doorway->Threshold]]
+
+:: ChooseMethod
+The direct path to the shuttle no longer exists. Five bad possibilities remain.
+
+[[Lift the collapsed service gate and make a bridge->ForceCheck]]
+[[Hold your identity together through the overlapping platform->EndureCheck]]
+[[Cross the vanishing tiles before they change again->AgilityCheck]]
+[[Use the pressure inside you to steady the station->ManaCheck]]
+[[Trust the impossible route marked on an obsolete transit map->LuckCheck]]
+
+:: ForceCheck
+(set: $flags to $flags + (dm: "rescue_method", "strength"))
+
+You get beneath the service gate and push.
+
+(if: $strength >= 2)[The metal rises. It is still brutally heavy, but your body finds leverage you did not possess yesterday. Vey gets the last students across before your arms give out.
+
+[[Finish the rescue->RescueClean]]](else:)[The gate moves just far enough to become a bridge. Something tears in your shoulder as you hold it there, and the pain turns your vision white.
+
+[[Pay the price->RescueCost]]]
+
+:: EndureCheck
+(set: $flags to $flags + (dm: "rescue_method", "endurance"))
+
+You step onto all three platforms at once. Different versions of the station try to give you different childhoods, scars, and names.
+
+(if: $endurance >= 2)[You remember the basement voice and let every offered life pass through you without accepting one. The platform remains solid long enough for the students to cross.
+
+[[Finish the rescue->RescueClean]]](else:)[You reach the shuttle, but return missing something small and precious: the sound of your mother's laugh. You know you loved it. You can no longer hear it.
+
+[[Carry the loss->RescueCost]]]
+
+:: AgilityCheck
+(set: $flags to $flags + (dm: "rescue_method", "agility"))
+
+The safe tiles appear in a sequence lasting less than a heartbeat.
+
+(if: $agility >= 2)[You move before thought can slow you. Vey follows your steps exactly, guiding each student over a path that disappears behind their heels.
+
+[[Finish the rescue->RescueClean]]](else:)[You make the first gap and miss the second. Vey catches your wrist. Madsen catches hers. The chain holds, but the delay costs the rescue its clean escape.
+
+[[Accept the cost->RescueCost]]]
+
+:: ManaCheck
+(set: $flags to $flags + (dm: "rescue_method", "mana"))
+
+You reach for the cold capacity behind your eyes. Every reflective surface in the station opens at once.
+
+(if: $mana >= 2)[Instead of choosing one version of the platform, you force all three to agree. The effort feels like holding a river in your skull, but the shuttle settles onto solid ground.
+
+[[Finish the rescue->RescueClean]]](else:)[The station notices you noticing it. The platform stabilizes, but something beyond the black water turns its attention toward your name.
+
+[[Accept its attention->RescueCost]]]
+
+:: LuckCheck
+(set: $flags to $flags + (dm: "rescue_method", "luck"))
+
+There is no safe route. You choose one anyway.
+
+(if: $luck >= 2)[The brass token fits a turnstile installed decades after it was minted. A gate opens where a wall stood, revealing a dry maintenance path directly to the shuttle.
+
+[[Finish the rescue->RescueClean]]](else:)[You flip a coin you do not remember carrying. It lands on its edge and points toward a maintenance door. The route works once, then collapses behind the last student.
+
+[[Wonder who paid for the coincidence->RescueCost]]]
+
+:: RescueClean
+(set: $flags to $flags + (dm: "rescued_students", true))
+(set: $c_president to it + 1)
+
+The final student clears the shuttle before it slips into black water and vanishes without a splash.
+
+(if: $flags's "late_to_exchange")[You saved everyone still aboard, but an empty seat and Vey's silence tell you that arriving earlier would have changed something.]
+
+Vey leans against a pillar, breathing hard. “I had a plan.”
+
+“It looked excellent from a distance.”
+
+“It was improving.” She looks toward Madsen's circle. “Unfortunately, so is the disaster.”
+
+The rupture has narrowed into the outline of a door.
+
+[[Join Madsen->Threshold]]
+
+:: RescueCost
+(set: $flags to $flags + (dm: "rescued_students", true))
+(set: $flags to $flags + (dm: "wounded_at_exchange", true))
+(set: $c_president to it + 1)
+
+The rescue works, but the station keeps payment.
+
+Madsen pulls the last student into her circle. Vey remains beside you until you can stand—or remember why you are already standing.
+
+“You came back,” she says.
+
+You look at the trembling walls. “Ask me whether that was intelligent later.”
+
+The rupture has narrowed into the outline of a door.
+
+[[Join Madsen->Threshold]]
+
+:: Threshold
+The doorway stands unsupported at the end of the platform. Its wood is dark with rain although the station is dry. Someone has carved your name across it in handwriting identical to your mother's.
+
+The thing beyond it presses against the frame. Silver light leaks around the hinges.
+
+“What happens if it opens?” you ask.
+
+“It has opened,” Madsen says. “The question is where the pressure goes next.”
+
+She explains only what matters. The rupture is attached to you. If you cross, it should follow and give her a chance to seal Earth behind you. If you remain, more of Aurel will be pulled into the overlap.
+
+“Should?” Vey says.
+
+“This kind of magic dislikes certainty.”
+
+“And my sponsor?”
+
+Madsen watches the door instead of you. “He built his life around the day you would stand here.”
+
+This is not transportation. It is a decision with a city leaning on it.
+
+[[Open the door before anyone can order you to->CrossForAurel]]
+[[Make Madsen promise to protect Aurel, then cross->BargainCross]]
+[[Refuse and try to close it from Earth->RefuseDoor]]
+
+:: CrossForAurel
+(set: $flags to $flags + (dm: "crossed_for_aurel", true))
+
+You put your hand on the wet brass knob.
+
+“Seal it behind me.”
+
+Madsen nods once.
+
+You choose the door.
+
+[[Cross->FirstDoor]]
+
+:: BargainCross
+(set: $flags to $flags + (dm: "sponsor_owes_aurel", true))
+(set: $c_caretaker to it + 1)
+
+“Promise me Cinderhall gets evacuated. Promise me the injured get real explanations. Promise me your employer doesn't erase this by erasing them.”
+
+“I cannot promise all three.”
+
+“Then pick two and owe me the third.”
+
+Madsen studies you like an equation that has started negotiating with the mathematician.
+
+“Agreed,” she says.
+
+Only then do you touch the knob.
+
+[[Cross->FirstDoor]]
+
+:: RefuseDoor
+You press both hands against the frame and push the way you would close any other door.
+
+(if: $mana >= 2)[The power behind your eyes answers. For one impossible second, the doorway becomes small enough to fit between your palms. You could close it. You could remain in Aurel and refuse the larger story—at least until the next Bleed.
+
+[[Choose the closed life->ClosedDoorEnding]]
+[[Let it open and cross by choice->CrossForAurel]]](else:)[The door does not move. Cracks race across the station ceiling, and somewhere above you the river changes direction.
+
+Madsen does not force you. That makes the choice worse.
+
+[[Cross before Aurel pays again->CrossForAurel]]
+[[Demand Madsen's promise first->BargainCross]]]
+
+:: ClosedDoorEnding
+(set: $flags to $flags + (dm: "closed_first_door", true))
+
+You close the door.
+
+Aurel survives the night. Greywater Observatory burns to its foundations. Madsen disappears, Vey begins keeping two sets of memories, and every mirror in your house eventually cracks.
+
+For eleven months, you live the life you defended.
+
+Then a door appears in the middle of the Monongahela, and this time your name is carved on both sides.
+
+## EARLY ENDING — THE CLOSED LIFE
+
+[[Return to the choice->Threshold]]
+[[Begin again->Start]]
+
+:: FirstDoor
+(set: $flags to $flags + (dm: "first_crossing", true))
+
+The door opens onto a shore of ash-white sand. A silver ocean has no horizon. Above it, a moon burns without giving heat.
+
+Your first step carries the weight of the choice that brought you here.
+
+(if: $flags's "rescued_students")[You carry the memory of hands pulled out of a falling station.]
+(if: $flags's "contained_first")[You carry the knowledge that a city can be saved while particular people pay for it.]
+(if: $flags's "read_mothers_note")[The brass token in your pocket turns toward the burning moon like a compass.]
+(if: $flags's "wounded_at_exchange")[The wound from Aurel crosses with you. Apparently consequences know the route.]
+
+Madsen speaks through the narrowing gap behind you.
+
+“The worlds are called the Strata,” she says. “Your sponsor calls people like you Prismborn.”
+
+“How many people like me?”
+
+The door begins to close.
+
+Madsen's final answer reaches you as a whisper.
+
+“Now? One.”
+
+The shore breaks beneath your feet.
+
+[[Fall into the first Strata->SunderedGlimpse]]
+
+:: SunderedGlimpse
+You fall through a blue sky crowded with pieces of a kingdom.
+
+A castle drifts upside down above a forest. Roads end in open air. Armies on separate islands fire chains into one another's soil and drag the land itself closer.
+
+Far below, a woman raises a sword inscribed with promises.
+
+On another fragment, a thief in a scholar's coat steals the machine keeping her city aloft.
+
+Both look up.
+
+Both see you falling.
+
+## END OF ACT 0
+
+Your investigation, rescue decision, parameter rank, relationships, injury, relic, and reason for crossing will carry into **Act I — The Sundered Court**.
+
+[[Play Act 0 again->Start]]
 
 :: Codex
-(story metadata — internal)
-This passage is a placeholder for the in-game Codex (companions, Strata, relics).
-It is not shipped content; see design/ for the source tables.
+Internal development note: the shipped Codex will reveal terminology only after the player encounters it. See `design/` for canonical state and world rules.

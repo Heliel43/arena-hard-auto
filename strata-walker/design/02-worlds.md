@@ -1,29 +1,47 @@
-# 02 — World / Place Archetypes (mix of new + re-skinned)
+# 02 — World / Place Archetypes
 
-> Each visited Strata is a self-contained arc. "New" = invented from scratch; "Re-skin"
-> = keeps the *archetype* of a source world but with fully original names, lore, and map.
+> Earth is the recurring home and emotional anchor. Every other Strata is an original
+> world with its own metaphysics, factions, geography, and history.
 
-| ID | Strata | Type | Original skin (concept) | Fanfic echo (internal) |
-|----|--------|------|--------------------------|------------------------|
-| W0 | Cinderhall / Aurel | Re-skin (home) | A river-city academy where the protagonist awakens. Magical boarding school, original houses & rites. | school-world |
-| W1 | The Sundered Court | Re-skin | A shattered realm where factions war over a world-binding relic. Trial-by-combat politics. | relic-war world |
-| W2 | The Gilded Below | Re-skin | An infernal court of contracts and patronage; alliance is a negotiation. | court-world |
-| W3 | The Huntspire | Re-skin | An academy that trains monster-hunters; features a fall-of-the-academy arc. | hunt-academy world |
-| W4 | The Drowned Archive | Re-skin | A school of lost histories built on a drowned library; time/relic mysteries. | lost-school world |
-| W5 | The Glass Sea | **New** | A world that is one vast reflective ocean; thoughts become weather. | invented |
-| W6 | The Hollow Choir | **New** | A silent city where sound is forbidden and memory is currency. | invented |
-| W7+ | (your invention) | **New** | Add worlds as needed to host recombined beats. | invented |
+| ID | Strata | Type | Original concept |
+|----|--------|------|------------------|
+| W0 | Earth / Aurel | Home | Present-day Aurel, Pennsylvania: a fictional river city whose abandoned industry, rail tunnels, and Cinderhall Academy conceal old Doors. Magic is hidden from the public. |
+| W1 | The Sundered Court | Originalized | A realm broken into mobile territories. Factions fight over the Axis Crown, a mechanism that decides which lands remain connected and which are abandoned to the void. |
+| W2 | The Gilded Below | Originalized | A subterranean city where promises become gold beneath the skin and memories, names, service, and future favors are legal currency. |
+| W3 | The Huntspire | Originalized | A fortress-academy that trains hunters to contain creatures born from failed crossings, while hiding its role in manufacturing the threat. |
+| W4 | The Drowned Archive | Originalized | A flooded library where history survives inside water and every memory read must be paid for with one of the reader's own. |
+| W5 | The Glass Sea | New | A reflective ocean-world where thoughts become weather: fear raises storms and certainty freezes the sea. |
+| W6 | The Hollow Choir | New | A silent city where speaking consumes memory and political power belongs to those who can afford to be heard. |
+| W7+ | Future Strata | New | Added only when the act map needs a genuinely distinct magical rule or moral problem. |
 
-## Place-name rules (avoid accidental infringement)
-- No real franchise toponyms (Kuoh, Fuyuki, Beacon, Vale, Mistral, Hogwarts, Chaldea,
-  Tamriel, etc.).
-- Build names from your own phonology; keep a consistent feel per Strata.
-- Public-domain mythology (Izanami, Arachne as *myths*) is fine as inspiration, but their
-  *franchise-specific* renditions are not — reinvent.
+## Earth rules
+- Cinderhall is an ordinary American school on the surface, not a public magical academy.
+- Supernatural incidents are concealed, misremembered, algorithmically erased, or absorbed
+  into a new version of local history after a Bleed.
+- Earth interludes follow every major world so the player sees what their choices changed.
+- Real American culture and geography may be used normally. Aurel itself is fictional so
+  its neighborhoods and history can transform without rewriting a real community.
 
-## Re-skin checklist per world
-- [ ] Original name + etymology
-- [ ] Original map / key locations (no 1:1 copy of a source map)
-- [ ] Original factions with original motivations
-- [ ] Original "rule of the world" (what makes this Strata distinct magically)
-- [ ] Original set-piece beats pulled from fanfic arcs but re-contextualized
+## Universal vocabulary
+Common terms—including magic, god, demon, angel, witch, spirit, mana, soul, curse, ritual,
+relic, monster, and dragon—may be used directly. Originality comes from what these beings
+are, what they want, and how their powers work, not from replacing every familiar noun.
+
+## Fiction-reference rule
+Copyrighted franchises can be mentioned only as fiction available on Earth. Never:
+- open a Door into one of those settings;
+- introduce its characters or signature artifacts;
+- make its lore secretly true;
+- let the protagonist solve an original-world problem through canon knowledge;
+- market the game through the borrowed title or comparison.
+
+A brief comparison can establish voice. The world should then contradict it.
+
+## World-building checklist
+- [ ] Original name and history
+- [ ] Original map and key locations
+- [ ] Original factions with incompatible but understandable goals
+- [ ] One clear magical rule the player learns through action
+- [ ] A consequence that follows the protagonist back to Earth
+- [ ] Source-bank beats recombined outside their original order and context
+- [ ] No franchise-specific proper nouns, systems, signature abilities, or lore

@@ -66,13 +66,25 @@ try {
     const out = eng.renderHTML(name);
     if (typeof out !== 'string') throw new Error('renderHTML did not return string for ' + name);
   }
-  // Reset after the all-passage smoke test, then exercise relationship and stat choices.
+  // Every internal link must resolve to a passage.
+  const broken = [];
+  for (const [from, body] of Object.entries(PASSAGES)) {
+    const linkRe = /\[\[(.*?)(?:->|\|)(.*?)\]\]|\[\[([^\]]+)\]\]/g;
+    let match;
+    while ((match = linkRe.exec(body)) !== null) {
+      const target = (match[2] || match[3] || '').trim();
+      if (target && PASSAGES[target] === undefined) broken.push(from + ' -> ' + target);
+    }
+  }
+  if (broken.length) throw new Error('broken passage links: ' + broken.join(', '));
+
+  // Reset after the smoke test, then exercise one relationship and one parameter choice.
   const startHTML = eng.renderHTML('Start');
   eng.renderHTML('ConfrontVey');
-  eng.renderHTML('Oath');
+  eng.renderHTML('HoldFast');
   const st = eng.getState();
   if (st.c_president !== 1) throw new Error('ConfrontVey should raise the President relationship');
-  if (st.endurance !== 2) throw new Error('Oath should raise Endurance from E to D');
+  if (st.endurance !== 2) throw new Error('HoldFast should raise Endurance from E to D');
   for (const key of ['strength', 'agility', 'mana', 'luck']) {
     if (st[key] !== 1) throw new Error(key + ' should remain at rank E');
   }
