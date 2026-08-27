@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Strata Walker</title><style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #0e1116; color: #d7dde6; font: 16px/1.6 -apple-system, Segoe UI, Roboto, sans-serif; }
+#app { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+h1 { font-size: 2rem; letter-spacing: .5px; color: #ffd479; margin: 0 0 .5em; }
+h2 { color: #ffd479; }
+.passage p { margin: 0 0 1em; }
+hr { border: none; border-top: 1px solid #2a313c; margin: 1.4em 0; }
+a.lk { color: #7fd1ff; text-decoration: none; border-bottom: 1px dotted #7fd1ff; cursor: pointer; }
+a.lk:hover { color: #fff; border-bottom-color: #fff; }
+.status { position: sticky; bottom: 0; margin-top: 2em; padding: 10px 14px; background: #161b22; border: 1px solid #2a313c; border-radius: 8px; color: #9aa7b5; font-size: 13px; }
+.missing { color: #ff6b6b; }
+</style></head><body><main id="app"></main><script>window.PASSAGES={"StoryTitle":"The Strata Walker","StoryData":"{\n  \"ifid\": \"A1B2C3D4-1234-5678-9ABC-DEF012345678\",\n  \"format\": \"Harlowe\",\n  \"format-version\": \"3.3.7\",\n  \"start\": \"Start\"\n}","Start":"(set: $insight to 1)\n(set: $resolve to 1)\n(set: $guile to 1)\n(set: $bond to 0)\n(set: $flags to (dm:))\n(set: $relics to (a:))\n(set: $c_oath to 0)\n(set: $c_mistress to 0)\n(set: $c_arcanist to 0)\n(set: $c_spirit to 0)\n(set: $c_trick to 0)\n(set: $c_lantern to 0)\n(set: $c_forge to 0)\n(set: $c_caretaker to 0)\n(set: $c_president to 0)\n\n# THE STRATA WALKER\n\nA world-hopping tale rebuilt from a fanfiction source. Every character, place, and name here is original.\n\nInsight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)\n\n[[Begin->Awakening]]","Awakening":"The ceiling of Cinderhall Academy's east hall wore a crack shaped like a half-asked question. You'd counted its branches often enough to know it by heart — which was exactly how you noticed you weren't entirely inside your own skull.\n\nForeign thoughts again. Too solid to be daydreams. A *silver tide* at the corner of your sight, there and gone, and the stubborn impression that you'd stood on a shore that did not exist, watching a moon that *burned* instead of shone.\n\n\"You're wanted in the President's office, delegate.\"\n\nThe prefect didn't wait for an answer. President Vey's summons were never requests. You went.\n\n---\n\nPresident Vey didn't look up from her ledgers. \"Your petition to join the Greywater expedition was denied.\"\n\n\"I — what petition? I never —\"\n\n\"Your sponsor did. The one who enrolled you. He revoked it this morning.\" She finally met your eyes. \"You have a sponsor. You've never mentioned him. Neither have we, because the name is sealed.\"\n\nA sponsor. The man — if he was a man — who paid your tuition and signed you in three years ago and then vanished. The one the caretaker Madsen answers to. The one whose contempt you'd only ever felt secondhand, through her.\n\n\"What does he care if I go to Greywater?\"\n\n\"That,\" Vey said, \"is precisely the question I'm not permitted to answer.\"\n\n[[Demand he be contacted->ConfrontVey]]\n[[Let it go, for now->Home]]","ConfrontVey":"\"I'm not a child under lock and key,\" you said. \"If someone's making decisions about my life, I want the line open.\"\n\nVey's pen stilled. For a breath you thought she might actually respect it.\n\n\"I'll note your objection,\" she said, and you knew that was all you'd get. \"But the seal holds, delegate. Whatever he is, he outranks this school.\"\n\n(set: $resolve to it + 1)\n(set: $flags to $flags + (dm: \"confronted_vey\", true))\n\nThe walk home felt longer than usual. The silver tide lapped at the edges of everything.\n\n[[Continue->Home]]","Home":"The house was empty, the way it always was. Madsen would come by in a few days — let herself in, sweep the rooms with that measuring look, and leave without saying whether your sponsor was pleased.\n\nYou dropped your bag. The silver tide was *wider* now, a seam of light along the baseboard, and behind it —\n\nA shore. A burning moon. A voice that wasn't yours, asking if you were ready to *see*.\n\nWhat do you do?\n\n[[Slam the door on it. Go to the workshop and lose yourself in the engines.->Workshop]]\n[[Sit with the silence and try to remember the shore.->Shore]]\n[[Steel yourself to corner Madsen next time and force the truth.->Oath]]","Workshop":"You threw yourself into the half-built engine, bolts and blueprints a wall against the impossible. It almost worked. Almost.\n\nBut your hands kept drawing the same symbol — a lattice of eyes, each one a window onto a different sky.\n\n(set: $guile to it + 1)\n(set: $flags to $flags + (dm: \"workshop\", true))\n\n[[The seam opens->TheSeam]]","Shore":"You let the silence in. The shore rose around you — ash-white sand, a tide of liquid silver, and a moon that burned without heat. Somewhere in that vision, a door with your name on it stood ajar.\n\n(set: $insight to it + 1)\n(set: $flags to $flags + (dm: \"shore\", true))\n\n[[The seam opens->TheSeam]]","Oath":"You would not be managed by ghosts. The next time Madsen's key turned in the lock, you'd be waiting — and this time she'd answer, or you'd walk out the door and never come back.\n\n(set: $resolve to it + 1)\n(set: $flags to $flags + (dm: \"oath\", true))\n\n[[The seam opens->TheSeam]]","TheSeam":"The seam along the baseboard *opened*.\n\nNot a crack in the plaster. A window. Through it: a version of Cinderhall where the halls were made of frozen music, and something vast and patient turned its attention toward you.\n\nYou were Prismborn. You'd always been Prismborn. The only question left was which Strata you'd fall into first.\n\nInsight: (print: $insight) · Resolve: (print: $resolve) · Guile: (print: $guile)\n\n[[Return to the beginning->Start]]","Codex":"(story metadata — internal)\nThis passage is a placeholder for the in-game Codex (companions, Strata, relics).\nIt is not shipped content; see design/ for the source tables."};window.START="Start";</script><script>/*
+ * Minimal Twee/Harlowe-subset runtime for previewing StrataWalker.tw in a browser.
+ * Supports the subset used by the project: (set:), (print:), (text:), (if:)/(elseif:)/(else:),
+ * (goto:), [[links]], (dm:), (a:), the `it` keyword, and datamap property access (`'s`).
+ * This is NOT a full Harlowe implementation — it only needs to mirror the pilot + near-future
+ * passages. The canonical Twine source (StrataWalker.tw) compiles in the Twine desktop app.
+ */
+(function (global) {
+  function createEngine(PASSAGES) {
+    let state = {};
+    let pendingGoto = null;
+
+    function getVar(n) { return state[n]; }
+    function setVar(n, v) { state[n] = v; }
+    function truthy(v) {
+      if (typeof v === 'boolean') return v;
+      if (v === null || v === undefined) return false;
+      if (v === 0 || v === '') return false;
+      if (Array.isArray(v) && v.length === 0) return false;
+      return true;
+    }
+    function stringify(v) {
+      if (v === null || v === undefined) return '';
+      if (typeof v === 'boolean') return v ? 'true' : 'false';
+      if (typeof v === 'number') return String(v);
+      return String(v);
+    }
+    function escHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    function escAttr(s) { return escHtml(s).replace(/"/g, '&quot;'); }
+
+    // ---- tokenizer for macro expressions ----
+    function tokenize(s) {
+      const toks = [];
+      let i = 0;
+      const re = /(\s+)|("(?:[^"\\]|\\.)*")|('s\b)|(\d+(?:\.\d+)?)|(\$[A-Za-z_][A-Za-z0-9_]*)|([A-Za-z_][A-Za-z0-9_]*)|(>=|<=|>|<|=)|(\+|-|\*|\/)|(\()|(\))|(,)|(:)/g;
+      let m;
+      while ((m = re.exec(s)) !== null) {
+        if (m[1] !== undefined) continue; // whitespace
+        if (m[2] !== undefined) { toks.push({ t: 'str', v: m[2].slice(1, -1).replace(/\\"/g, '"').replace(/\\'/g, "'") }); continue; }
+        if (m[3] !== undefined) { toks.push({ t: 'prop' }); continue; }
+        if (m[4] !== undefined) { toks.push({ t: 'num', v: parseFloat(m[4]) }); continue; }
+        if (m[5] !== undefined) { toks.push({ t: 'var', v: m[5].slice(1) }); continue; }
+        if (m[6] !== undefined) { toks.push({ t: 'id', v: m[6] }); continue; }
+        if (m[7] !== undefined) { toks.push({ t: 'op', v: m[7] }); continue; }
+        if (m[8] !== undefined) { toks.push({ t: 'op', v: m[8] }); continue; }
+        if (m[9] !== undefined) { toks.push({ t: 'lp' }); continue; }
+        if (m[10] !== undefined) { toks.push({ t: 'rp' }); continue; }
+        if (m[11] !== undefined) { toks.push({ t: 'comma' }); continue; }
+        if (m[12] !== undefined) { toks.push({ t: 'colon' }); continue; }
+      }
+      return toks;
+    }
+
+    // ---- recursive-descent expression evaluator ----
+    function parseExpr(toks) {
+      let p = 0;
+      const peek = () => toks[p];
+      const next = () => toks[p++];
+
+      function parseOr() {
+        let l = parseAnd();
+        while (peek() && peek().t === 'id' && peek().v === 'or') { next(); const r = parseAnd(); l = truthy(l) || truthy(r); }
+        return l;
+      }
+      function parseAnd() {
+        let l = parseNot();
+        while (peek() && peek().t === 'id' && peek().v === 'and') { next(); const r = parseNot(); l = truthy(l) && truthy(r); }
+        return l;
+      }
+      function parseNot() {
+        if (peek() && peek().t === 'id' && peek().v === 'not') { next(); return !truthy(parseNot()); }
+        return parseComparison();
+      }
+      function parseComparison() {
+        let l = parseAdd();
+        while (peek()) {
+          const t = peek();
+          if (t.t === 'id' && t.v === 'is') {
+            next();
+            let op = '==';
+            if (peek() && peek().t === 'id' && peek().v === 'not') { next(); op = '!='; }
+            const r = parseAdd();
+            l = (op === '==') ? (l === r) : (l !== r);
+            continue;
+          }
+          if (t.t === 'op' && (t.v === '>' || t.v === '<' || t.v === '>=' || t.v === '<=')) {
+            next(); const r = parseAdd();
+            const a = Number(l), b = Number(r);
+            if (t.v === '>') l = a > b;
+            else if (t.v === '<') l = a < b;
+            else if (t.v === '>=') l = a >= b;
+            else l = a <= b;
+            continue;
+          }
+          break;
+        }
+        return l;
+      }
+      function parseAdd() {
+        let l = parseMul();
+        while (peek() && peek().t === 'op' && (peek().v === '+' || peek().v === '-')) {
+          const op = next().v; const r = parseMul();
+          if (op === '+') l = addOp(l, r); else l = (typeof l === 'number' && typeof r === 'number') ? l - r : l - r;
+        }
+        return l;
+      }
+      function parseMul() {
+        let l = parsePostfix();
+        while (peek() && peek().t === 'op' && (peek().v === '*' || peek().v === '/')) {
+          const op = next().v; const r = parsePostfix();
+          l = (op === '*') ? l * r : l / r;
+        }
+        return l;
+      }
+      function parsePostfix() {
+        let node = parsePrimary();
+        while (peek() && peek().t === 'prop') {
+          next();
+          let key;
+          const k = peek();
+          if (k && k.t === 'str') { key = next().v; }
+          else if (k && k.t === 'id') { key = next().v; }
+          else { key = undefined; }
+          node = getProp(node, key);
+        }
+        return node;
+      }
+      function parsePrimary() {
+        const t = next();
+        if (!t) return undefined;
+        if (t.t === 'lp') {
+          const name = next();
+          if (!name || name.t !== 'id') throw new Error('bad macro');
+          if (peek() && peek().t === 'colon') next();
+          const args = [];
+          while (peek() && peek().t !== 'rp') {
+            args.push(parseAdd());
+            if (peek() && peek().t === 'comma') next();
+            else break;
+          }
+          if (peek() && peek().t === 'rp') next();
+          if (name.v === 'dm') {
+            const o = {};
+            for (let i = 0; i + 1 < args.length; i += 2) o[args[i]] = args[i + 1];
+            return o;
+          }
+          if (name.v === 'a') return args;
+          return undefined;
+        }
+        if (t.t === 'num') return t.v;
+        if (t.t === 'str') return t.v;
+        if (t.t === 'id' && t.v === 'true') return true;
+        if (t.t === 'id' && t.v === 'false') return false;
+        if (t.t === 'id' && t.v === 'it') return state._it;
+        if (t.t === 'var') return getVar(t.v);
+        return undefined;
+      }
+
+      const v = parseOr();
+      return v;
+    }
+
+    function getProp(obj, key) {
+      if (obj === null || obj === undefined) return undefined;
+      if (Array.isArray(obj) && key !== undefined && !isNaN(Number(key))) return obj[Number(key)];
+      if (typeof obj === 'object') return obj[key];
+      return undefined;
+    }
+    function addOp(l, r) {
+      if (l && typeof l === 'object' && !Array.isArray(l) && r && typeof r === 'object' && !Array.isArray(r)) {
+        return Object.assign({}, l, r);
+      }
+      if (Array.isArray(l) && Array.isArray(r)) return l.concat(r);
+      if (typeof l === 'string' || typeof r === 'string') return String(l) + String(r);
+      return l + r;
+    }
+    function evalStr(s) { return parseExpr(tokenize(s)); }
+
+    // ---- statement: (set: ...) ----
+    function splitTopLevel(s, sep) {
+      const out = []; let depth = 0; let cur = '';
+      for (let i = 0; i < s.length; i++) {
+        const c = s[i];
+        if (c === '(' || c === '[') depth++;
+        else if (c === ')' || c === ']') depth--;
+        if (depth === 0 && c === sep) { out.push(cur); cur = ''; }
+        else cur += c;
+      }
+      out.push(cur);
+      return out;
+    }
+    function executeSet(inner) {
+      inner = inner.replace(/^\s*:\s*/, '');
+      const parts = splitTopLevel(inner, ',');
+      for (let part of parts) {
+        part = part.trim();
+        if (!part) continue;
+        const idx = part.indexOf(' to ');
+        if (idx === -1) continue;
+        const left = part.slice(0, idx).trim();
+        const right = part.slice(idx + 4).trim();
+        let name = left;
+        if (name[0] === '$') name = name.slice(1);
+        state._it = getVar(name);
+        setVar(name, evalStr(right));
+      }
+    }
+
+    // ---- macro / link scanning ----
+    function findMatch(str, i, open, close) {
+      let depth = 0;
+      for (; i < str.length; i++) {
+        if (str[i] === open) depth++;
+        else if (str[i] === close) { depth--; if (depth === 0) return i; }
+      }
+      return -1;
+    }
+    function findBlockEnd(str, openIdx) {
+      let depth = 0, i = openIdx;
+      while (i < str.length) {
+        if (str.startsWith('[[', i)) {
+          const e = str.indexOf(']]', i + 2);
+          i = e === -1 ? str.length : e + 2; continue;
+        }
+        if (str[i] === '[') { depth++; i++; continue; }
+        if (str[i] === ']') { depth--; if (depth === 0) return i; i++; continue; }
+        i++;
+      }
+      return -1;
+    }
+    function parseMacroCall(str, i) {
+      // str[i] === '('
+      let j = i + 1;
+      while (j < str.length && /[A-Za-z]/.test(str[j])) j++;
+      const name = str.slice(i + 1, j).toLowerCase();
+      const colonIdx = (str[j] === ':') ? j : j; // name ends at j; colon expected at j
+      const closeP = findMatch(str, i, '(', ')');
+      const inner = str.slice(colonIdx + 1, closeP).trim();
+      return { name, inner, closeP };
+    }
+    function parseIfChain(str, i) {
+      const ifc = parseMacroCall(str, i);
+      const blockOpen = ifc.closeP + 1;
+      const blockEnd = findBlockEnd(str, blockOpen);
+      const thenNodes = parseNodes(str.slice(blockOpen + 1, blockEnd), 0);
+      const elseif = []; let els = null; let k = blockEnd + 1;
+      while (k < str.length) {
+        if (str.startsWith('(elseif:', k)) {
+          const ec = parseMacroCall(str, k);
+          const bo = ec.closeP + 1; const be = findBlockEnd(str, bo);
+          elseif.push({ cond: ec.inner, then: parseNodes(str.slice(bo + 1, be), 0) });
+          k = be + 1; continue;
+        }
+        if (str.startsWith('(else:', k)) {
+          const ec = parseMacroCall(str, k);
+          const bo = ec.closeP + 1; const be = findBlockEnd(str, bo);
+          els = parseNodes(str.slice(bo + 1, be), 0);
+          k = be + 1; continue;
+        }
+        break;
+      }
+      return { node: { t: 'if', cond: ifc.inner, then: thenNodes, elseif, else: els }, end: k };
+    }
+
+    function parseNodes(str, start) {
+      const nodes = [];
+      let buf = '';
+      const flush = () => { if (buf !== '') { nodes.push({ t: 'text', val: buf }); buf = ''; } };
+      let i = start;
+      while (i < str.length) {
+        const c = str[i];
+        if (c === '(') {
+          const closeP = findMatch(str, i, '(', ')');
+          if (closeP === -1) { buf += str[i]; i++; continue; }
+          const j = i + 1;
+          let n = j;
+          while (n < closeP && /[A-Za-z]/.test(str[n])) n++;
+          const name = str.slice(j, n).toLowerCase();
+          const inner = str.slice(n + 1, closeP).replace(/^\s*:/, '').trim();
+          if (name === 'set') { flush(); executeSet(inner); i = closeP + 1; continue; }
+          if (name === 'print' || name === 'text') { flush(); nodes.push({ t: 'text', val: stringify(evalStr(inner)) }); i = closeP + 1; continue; }
+          if (name === 'goto') {
+            flush();
+            let id = inner.replace(/^"|"$/g, '').trim();
+            nodes.push({ t: 'goto', id });
+            i = closeP + 1; continue;
+          }
+          if (name === 'if' || name === 'elseif' || name === 'else') {
+            const chain = parseIfChain(str, i);
+            flush();
+            nodes.push(chain.node);
+            i = chain.end;
+            continue;
+          }
+          // unknown macro: keep as text
+          buf += str.slice(i, closeP + 1); i = closeP + 1; continue;
+        }
+        if (c === '[' && str[i + 1] === '[') {
+          const end = str.indexOf(']]', i);
+          if (end === -1) { buf += c; i++; continue; }
+          const inner = str.slice(i + 2, end);
+          let text, id;
+          if (inner.includes('->')) { const parts = inner.split('->'); text = parts[0].trim(); id = parts[1].trim(); }
+          else if (inner.includes('|')) { const parts = inner.split('|'); text = parts[0].trim(); id = parts[1].trim(); }
+          else { id = inner.trim(); text = inner.trim(); }
+          flush();
+          nodes.push({ t: 'link', text, id });
+          i = end + 2; continue;
+        }
+        buf += c; i++;
+      }
+      flush();
+      return nodes;
+    }
+
+    function renderNodes(nodes) {
+      let html = '';
+      for (const node of nodes) {
+        if (node.t === 'text') html += formatText(node.val);
+        else if (node.t === 'link') html += '<a href="#" class="lk" data-id="' + escAttr(node.id) + '">' + escHtml(node.text) + '</a>';
+        else if (node.t === 'goto') { pendingGoto = node.id; return html; }
+        else if (node.t === 'if') {
+          let chosen = null;
+          if (truthy(evalStr(node.cond))) chosen = node.then;
+          else {
+            for (const e of (node.elseif || [])) { if (truthy(evalStr(e.cond))) { chosen = e.then; break; } }
+            if (!chosen && node.else) chosen = node.else;
+          }
+          if (chosen) html += renderNodes(chosen);
+        }
+      }
+      return html;
+    }
+
+    function formatText(s) {
+      const lines = s.split('\n');
+      const out = [];
+      for (let line of lines) {
+        let t = line.trim();
+        if (t === '') continue;
+        if (t === '---') { out.push('<hr>'); continue; }
+        if (/^#{1,6}\s+/.test(t)) {
+          const lvl = t.match(/^#+/)[0].length;
+          const txt = escHtml(t.replace(/^#+\s+/, ''));
+          out.push('<h' + lvl + '>' + txt + '</h' + lvl + '>');
+          continue;
+        }
+        let h = escHtml(t);
+        h = h.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+        h = h.replace(/_([^_]+)_/g, '<em>$1</em>');
+        out.push('<p>' + h + '</p>');
+      }
+      return out.join('\n');
+    }
+
+    function statusBar() {
+      const g = (n) => (typeof state[n] === 'number' ? state[n] : (state[n] ? state[n] : 0));
+      const relicN = Array.isArray(state.relics) ? state.relics.length : 0;
+      let companions = '';
+      const cmap = { c_oath: 'Oathkeeper', c_mistress: 'Mistress', c_arcanist: 'Arcanist', c_spirit: 'Spirit', c_trick: 'Trickster', c_lantern: 'Lantern', c_forge: 'Forge', c_caretaker: 'Caretaker', c_president: 'President' };
+      for (const k in cmap) { const v = state[k]; if (typeof v === 'number' && v !== 0) companions += ' · ' + cmap[k] + ' ' + (v > 0 ? '+' : '') + v; }
+      return '<div class="status">Insight ' + g('insight') + ' · Resolve ' + g('resolve') + ' · Guile ' + g('guile') + ' · Bond ' + g('bond') +
+        (relicN ? ' · Relics ' + relicN : '') + companions + '</div>';
+    }
+
+    function renderHTML(name) {
+      const raw = PASSAGES[name];
+      if (raw === undefined) return '<p class="missing">Missing passage: ' + escHtml(name) + '</p>';
+      let html = renderNodes(parseNodes(raw, 0));
+      if (pendingGoto) { const g = pendingGoto; pendingGoto = null; return renderHTML(g); }
+      return '<div class="passage">' + html + '</div>';
+    }
+
+    function apply(name) {
+      const app = global.document && global.document.getElementById('app');
+      if (!app) return renderHTML(name);
+      app.innerHTML = renderHTML(name) + statusBar();
+      const links = app.querySelectorAll('a.lk');
+      links.forEach((a) => {
+        a.addEventListener('click', (e) => { e.preventDefault(); apply(a.dataset.id); if (global.window) global.window.scrollTo(0, 0); });
+      });
+      return app.innerHTML;
+    }
+
+    return { renderHTML, apply, evalStr, getState: () => state, createEngine };
+  }
+
+  const api = { createEngine };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  if (typeof global !== 'undefined' && global.window) {
+    global.window.__strata = api;
+    global.document.addEventListener('DOMContentLoaded', () => {
+      const eng = api.createEngine(global.window.PASSAGES || {});
+      eng.apply(global.window.START || 'Start');
+    });
+  }
+})(typeof window !== 'undefined' ? window : globalThis);
+</script></body></html>
