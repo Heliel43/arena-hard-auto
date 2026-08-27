@@ -44,10 +44,13 @@ strata-walker/
     05-decisions.md         # locked creative and workflow decisions
     06-plot-outline.md      # mysteries, acts, interludes, endings
     07-branching-production.md # story-first workflow and branch budget
+    08-canon-locks.md        # protagonist, sponsor, mother, cast, crossing rules
   data/
     incoming/               # local-only source; ignored by Git
   story/
     beats/                  # abstract beat sheets, one named arc per file
+    outline/
+      00-master-spine.md    # 44-chapter common-story skeleton
     twine/
       StrataWalker.tw       # canonical Twee / Harlowe 3.3.7 source
       StrataWalker.html     # self-contained playable build
@@ -66,7 +69,7 @@ python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
 ## Current production target
-Treat the playable Act 0 as a prototype and pause engine expansion. Following
-`design/07-branching-production.md`, the next deliverable is a 35–45 chapter master story
-spine from the opening through all ending routes. Approve that general story before drafting
-Act I branches or adding more gameplay systems.
+Treat the playable Act 0 as a prototype and keep engine expansion paused. Draft 1 of the
+44-chapter master spine now exists in `story/outline/00-master-spine.md`, supported by the
+canon locks in `design/08-canon-locks.md`. Review the spine next, then overlay complete
+character arcs before drafting Act I choices or adding gameplay systems.

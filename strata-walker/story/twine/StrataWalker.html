@@ -376,7 +376,7 @@ a.lk:hover { color: #fff; border-bottom-color: #fff; }
       };
       const relicN = Array.isArray(state.relics) ? state.relics.length : 0;
       let companions = '';
-      const cmap = { c_oath: 'Oathkeeper', c_mistress: 'Mistress', c_arcanist: 'Arcanist', c_spirit: 'Spirit', c_trick: 'Trickster', c_lantern: 'Lantern', c_forge: 'Forge', c_caretaker: 'Caretaker', c_president: 'President' };
+      const cmap = { c_oath: 'Ada', c_mistress: 'June', c_arcanist: 'Mira', c_spirit: 'Sana', c_trick: 'Tom', c_lantern: 'Nell', c_forge: 'Ruth', c_caretaker: 'Madsen', c_president: 'Vey' };
       for (const k in cmap) { const v = state[k]; if (typeof v === 'number' && v !== 0) companions += ' · ' + cmap[k] + ' ' + (v > 0 ? '+' : '') + v; }
       return '<div class="status">Strength ' + rank('strength') + ' · Endurance ' + rank('endurance') +
         ' · Agility ' + rank('agility') + ' · Mana ' + rank('mana') + ' · Luck ' + rank('luck') +

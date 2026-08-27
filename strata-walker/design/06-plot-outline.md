@@ -38,9 +38,9 @@ its Door may draw it away from Earth. He crosses by choice.
 
 ## Act I — The Sundered Court
 The protagonist enters a world whose countries have become mobile fragments orbiting the
-ruined Axis Crown. Reconnecting one territory can condemn another.
+ruined Crown. Reconnecting one territory can condemn another.
 
-The Oathkeeper wants one lawful authority capable of ending the chaos. The Arcane Heir
+Ada wants one lawful authority capable of ending the chaos. Mira
 believes no ruler should control the machinery of geography. Both can become allies; neither
 exists merely to approve of the protagonist.
 
@@ -50,9 +50,9 @@ Aurel. The act ends by centralizing, distributing, destroying, or secretly takin
 Crown's core.
 
 ## Earth Interlude I — The Wrong Photograph
-Only minutes appear to have passed. Aurel's skyline is different, a dead factory has always
-been housing, and a family photograph includes a stranger. The specific changes depend on
-which territories the player preserved.
+Six days have passed. Aurel's skyline is different, a dead factory has always been housing,
+and a family photograph includes a stranger. The specific changes depend on which
+territories the player preserved.
 
 Madsen calls the differences harmless corrections. Vey calls them evidence that someone is
 editing Earth.
@@ -62,7 +62,7 @@ In a city beneath a permanent golden dusk, promises become metal under the skin.
 trade memories, names, future service, and emotional attachments. Breaking a contract
 physically damages the city.
 
-The Spirit Sovereign shelters people who sold so much identity that the law no longer
+Sana shelters people who sold so much identity that the law no longer
 recognizes them as people. Accessing the local Anchor could free them while collapsing the
 systems that feed and protect millions.
 
@@ -77,7 +77,7 @@ it for generations. Madsen admits that the academy was selected as a containment
 
 ## Act III — The Huntspire
 The protagonist needs training to survive further crossings. The Huntspire teaches combat,
-magic, field medicine, and containment under the Mistress of the Verge.
+magic, field medicine, and containment under June.
 
 Its hunters fight creatures produced by failed crossings. The institution secretly creates
 controlled failures to justify its authority and test recruits. When that machinery breaks,
@@ -87,19 +87,19 @@ The player can expose the institution, preserve it under new leadership, rescue 
 while abandoning its knowledge, or claim its crossing technology for Earth. Parameter
 checks change methods and casualties, not the moral meaning of the decision.
 
-## Act IV — The Drowned Archive
-History is stored in water. Reading a memory requires surrendering one of your own. The
-Lantern-Bearer can answer questions but always names the memory-price first. The
-Forge-Mother maintains the vessels that keep erased histories from disappearing entirely.
+## Act IV — The Archive
+History is stored in water. Reading a memory requires surrendering one of your own. Nell can
+answer questions but always names the memory-price first. Ruth Bell repairs the vessels that
+keep erased histories from disappearing entirely.
 
 The protagonist learns that Earth is not a primary reality. The sponsor's severance program
 has protected it by cutting unstable Strata loose. Those abandoned possibilities accumulate
 as the Unmaking.
 
-The protagonist's mother discovered evidence that severed worlds could be rewoven. Before
-she vanished, she altered the First Door so her child could eventually find the repair path.
-The sponsor raised and contained him because the same ability could either complete or end
-the severance program.
+Nora Mercer discovered evidence that severed worlds could be rewoven. Before she died in a
+failed repair, she left finite instructions in the First Door and keyed its second operation
+to Will. Dr. Hale raised and contained him because the same ability could either complete or
+end the severance program.
 
 ## Act V — The Glass Sea and Hollow Choir
 In the Glass Sea, thoughts become weather. The group cannot cross safely while hiding fear,

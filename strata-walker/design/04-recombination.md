@@ -16,12 +16,12 @@
 | Act | Title | Main location | Dramatic job |
 |-----|-------|---------------|--------------|
 | 0 | The Bleed | Earth: Aurel, Pennsylvania | Ordinary frustration becomes personal intrusion; the player investigates an anomaly, chooses a priority, and crosses the First Door voluntarily. |
-| I | The Sundered Court | W1 | First major world; conflict over the Axis Crown; meet Oathkeeper and Arcane Heir; learn that crossings alter Earth. |
-| Interlude I | The Wrong Photograph | Earth | Aurel looks nearly identical, but local history and the protagonist's family photograph have changed. |
-| II | The Gilded Below | W2 | Contract politics; promises have material cost; meet Spirit Sovereign; choose what cannot morally be sold. |
+| I | The Sundered Court | W1 Rell | Conflict over the Crown; meet Ada Rook and Mira Pell; learn that crossings alter Earth. |
+| Interlude I | The Wrong Photograph | Earth | Aurel looks nearly identical, but local history and Will's family photograph have changed. |
+| II | The Gilded Below | W2 Lowmarket | Contract politics; promises have material cost; meet Sana Rill and Tom Pike; choose what cannot morally be sold. |
 | Interlude II | Double Exposure | Earth | Public Bleed events begin; Vey reveals that Cinderhall monitors a dormant Door. |
-| III | The Huntspire | W3 | Training and earned power; expose the institution manufacturing the threat it claims to fight; meet Mistress of the Verge. |
-| IV | The Drowned Archive | W4 | Pay memory for history; meet Lantern-Bearer and Forge-Mother; learn why the sponsor sacrifices worlds. |
+| III | Huntspire | W3 | Training and earned power; expose the school manufacturing the threat it claims to fight; meet June Arlen. |
+| IV | The Archive | W4 | Pay memory for history; meet Nell and Ruth Bell; learn why Hale sacrifices worlds. |
 | V | Glass Sea / Hollow Choir | W5/W6 | New-world moral trials; companions take philosophical sides; discover the repair path hidden by the protagonist's mother. |
 | VI | The Unmaking | Earth overlaid by all surviving Strata | Resolve the cosmology through Seal, Weave, Shatter, Sponsor, or a difficult hidden path. Companion beliefs and prior world outcomes determine what is possible. |
 

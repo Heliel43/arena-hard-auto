@@ -6,10 +6,10 @@
 | ID | Strata | Type | Original concept |
 |----|--------|------|------------------|
 | W0 | Earth / Aurel | Home | Present-day Aurel, Pennsylvania: a fictional river city whose abandoned industry, rail tunnels, and Cinderhall Academy conceal old Doors. Magic is hidden from the public. |
-| W1 | The Sundered Court | Originalized | A realm broken into mobile territories. Factions fight over the Axis Crown, a mechanism that decides which lands remain connected and which are abandoned to the void. |
-| W2 | The Gilded Below | Originalized | A subterranean city where promises become gold beneath the skin and memories, names, service, and future favors are legal currency. |
-| W3 | The Huntspire | Originalized | A fortress-academy that trains hunters to contain creatures born from failed crossings, while hiding its role in manufacturing the threat. |
-| W4 | The Drowned Archive | Originalized | A flooded library where history survives inside water and every memory read must be paid for with one of the reader's own. |
+| W1 | Rell | Originalized | A realm broken into mobile territories. Its political crisis is the Sundered Court; factions fight over the Crown, a mechanism deciding which lands remain connected and which are abandoned to the void. |
+| W2 | Lowmarket | Originalized | A subterranean city where promises become gold beneath the skin and memories, names, service, and future favors are legal currency. “The Gilded Below” is an act title, not what residents call home. |
+| W3 | Huntspire | Originalized | A fortress-school that trains hunters to contain creatures born from failed crossings while hiding its role in manufacturing the threat. |
+| W4 | The Archive | Originalized | A flooded library where history survives inside water and every memory read must be paid for with one of the reader's own. |
 | W5 | The Glass Sea | New | A reflective ocean-world where thoughts become weather: fear raises storms and certainty freezes the sea. |
 | W6 | The Hollow Choir | New | A silent city where speaking consumes memory and political power belongs to those who can afford to be heard. |
 | W7+ | Future Strata | New | Added only when the act map needs a genuinely distinct magical rule or moral problem. |

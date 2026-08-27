@@ -188,8 +188,10 @@ Do not add major UI systems until:
 
 Afterward, engine work can focus on supporting a known story instead of dictating one.
 
-## Next concrete deliverable
-Freeze the current Twine build as the Act 0 prototype. Next create
-`story/outline/00-master-spine.md`: a 35–45 chapter, beginning-to-ending story synopsis with
-only act hinges marked. Review that spine before drafting Act I or adding more gameplay
-systems.
+## Current status and next deliverable
+The Act 0 Twine build is frozen as the gameplay prototype. Draft 1 of the 44-chapter
+beginning-to-ending story now exists in `story/outline/00-master-spine.md`, with only act
+hinges marked.
+
+Next review that spine for premise, pacing, revelations, and ending logic. Once approved,
+create the character-arc overlay before drafting Act I or adding gameplay systems.

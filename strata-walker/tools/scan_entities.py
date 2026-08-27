@@ -119,7 +119,7 @@ def main():
         json.dump(inventory, f, ensure_ascii=False, indent=2)
 
     with open('data/entities.csv', 'w', encoding='utf-8', newline='') as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator='\n')
         w.writerow(['term', 'type', 'franchise', 'role', 'action', 'suggested', 'count', 'first_chapter'])
         for e in inventory:
             w.writerow([e['term'], e['type'], e['franchise'], e['role'], e['action'], e['suggested'], e['count'], e['first_chapter']])
