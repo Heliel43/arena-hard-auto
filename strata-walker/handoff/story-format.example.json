@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0.0",
+  "story": {
+    "id": "strata-walker",
+    "title": "The Strata Walker",
+    "contentVersion": "act0-demo-1",
+    "startNode": "Start",
+    "rating": "mature",
+    "description": "Small engine-contract example; not the complete Act 0 content."
+  },
+  "ranks": [
+    { "value": 1, "label": "E", "description": "Latent or untrained" },
+    { "value": 2, "label": "D", "description": "Trained" },
+    { "value": 3, "label": "C", "description": "Exceptional" },
+    { "value": 4, "label": "B", "description": "Superhuman" },
+    { "value": 5, "label": "A", "description": "Strata-class" }
+  ],
+  "initialState": {
+    "parameters": {
+      "strength": 1,
+      "endurance": 1,
+      "agility": 1,
+      "mana": 1,
+      "luck": 1
+    },
+    "relationships": {
+      "ada": 0,
+      "june": 0,
+      "mira": 0,
+      "sana": 0,
+      "tom": 0,
+      "nell": 0,
+      "ruth": 0,
+      "madsen": 0,
+      "vey": 0
+    },
+    "flags": {},
+    "relics": [],
+    "variables": {}
+  },
+  "nodes": [
+    {
+      "id": "Start",
+      "title": "Act 0 — The Bleed",
+      "act": "0",
+      "chapter": 1,
+      "body": "Aurel, Pennsylvania. The last bell has rung, but President Vey wants to see you before you leave.",
+      "tags": ["earth", "cinderhall"],
+      "checkpoint": true,
+      "choices": [
+        {
+          "id": "start_go",
+          "label": "Answer the summons",
+          "target": "VeyOffice",
+          "kind": "tactical",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "VeyOffice",
+      "title": "The council office",
+      "act": "0",
+      "chapter": 1,
+      "body": "Vey shows you an order signed by the sponsor who controls your tuition and refuses to identify himself.",
+      "tags": ["earth", "vey"],
+      "choices": [
+        {
+          "id": "vey_demand",
+          "label": "Demand a name and a direct line",
+          "target": "AfterOffice",
+          "kind": "relationship",
+          "effects": [
+            {
+              "type": "increment",
+              "path": "relationships.vey",
+              "amount": 1,
+              "minimum": -3,
+              "maximum": 5
+            },
+            {
+              "type": "set",
+              "path": "flags.confronted_vey",
+              "value": true
+            }
+          ],
+          "feedback": "Vey noticed that you pushed back."
+        },
+        {
+          "id": "vey_leave",
+          "label": "Photograph the order and leave",
+          "target": "AfterOffice",
+          "kind": "exploration",
+          "effects": [
+            {
+              "type": "set",
+              "path": "flags.photographed_order",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AfterOffice",
+      "title": "Outside Cinderhall",
+      "act": "0",
+      "chapter": 2,
+      "body": "Madsen orders you home. In the trophy-case glass, your reflection remains beside the office door after you walk away.",
+      "tags": ["earth", "bleed"],
+      "choices": [
+        {
+          "id": "reflection_touch",
+          "label": "Approach the reflection",
+          "target": "ReflectionResult",
+          "kind": "parameter",
+          "effects": [
+            {
+              "type": "increment",
+              "path": "parameters.mana",
+              "amount": 1,
+              "minimum": 1,
+              "maximum": 5
+            },
+            {
+              "type": "set",
+              "path": "flags.entered_reflection",
+              "value": true
+            },
+            {
+              "type": "checkpoint",
+              "label": "Before touching the glass"
+            }
+          ],
+          "feedback": "Mana increased: E → D",
+          "danger": "warned",
+          "checkpointBefore": true
+        },
+        {
+          "id": "hidden_relic_route",
+          "label": "Fit the old transit token into the frame",
+          "target": "ReflectionResult",
+          "kind": "exploration",
+          "visibleIf": {
+            "hasRelic": "brass_token"
+          },
+          "effects": [
+            {
+              "type": "set",
+              "path": "flags.token_used_at_cinderhall",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ReflectionResult",
+      "title": "The wrong corridor",
+      "act": "0",
+      "chapter": 2,
+      "body": "Cold power moves through your hand. The reflection mouths a warning before the city sirens begin.",
+      "tags": ["earth", "magic"],
+      "choices": [
+        {
+          "id": "continue_to_exchange",
+          "label": "Pull free and answer the alert",
+          "target": "Start",
+          "kind": "tactical",
+          "enabledIf": {
+            "path": "parameters.mana",
+            "op": "gte",
+            "value": 2
+          },
+          "effects": []
+        }
+      ]
+    }
+  ]
+}

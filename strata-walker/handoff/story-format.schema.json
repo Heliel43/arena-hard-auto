@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stratawalker.game/schema/story-format.schema.json",
+  "title": "Strata Walker Story Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "story", "ranks", "initialState", "nodes"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "contentVersion", "startNode", "rating"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "title": { "type": "string", "minLength": 1 },
+        "contentVersion": { "type": "string", "minLength": 1 },
+        "startNode": { "$ref": "#/$defs/id" },
+        "rating": { "enum": ["teen", "mature"] },
+        "description": { "type": "string" }
+      }
+    },
+    "ranks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/rank" }
+    },
+    "initialState": { "$ref": "#/$defs/gameState" },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/node" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "rank": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "label"],
+      "properties": {
+        "value": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "label": { "enum": ["E", "D", "C", "B", "A"] },
+        "description": { "type": "string" }
+      }
+    },
+    "parameterBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strength", "endurance", "agility", "mana", "luck"],
+      "properties": {
+        "strength": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "endurance": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "agility": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "mana": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "luck": { "type": "integer", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
+      "additionalProperties": { "type": "integer", "minimum": -3, "maximum": 5 }
+    },
+    "relic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "gameState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameters", "relationships", "flags", "relics"],
+      "properties": {
+        "parameters": { "$ref": "#/$defs/parameterBlock" },
+        "relationships": { "$ref": "#/$defs/relationships" },
+        "flags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["boolean", "number", "string", "null"]
+          }
+        },
+        "relics": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/relic" }
+        },
+        "variables": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["boolean", "number", "string", "null"]
+          }
+        }
+      }
+    },
+    "comparisonCondition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "op", "value"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(parameters|relationships|flags|variables)\\.[A-Za-z0-9_]+$"
+        },
+        "op": { "enum": ["eq", "neq", "gt", "gte", "lt", "lte"] },
+        "value": { "type": ["boolean", "number", "string", "null"] }
+      }
+    },
+    "condition": {
+      "oneOf": [
+        { "$ref": "#/$defs/comparisonCondition" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["all"],
+          "properties": {
+            "all": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/$defs/condition" }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["any"],
+          "properties": {
+            "any": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/$defs/condition" }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["not"],
+          "properties": {
+            "not": { "$ref": "#/$defs/condition" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["hasRelic"],
+          "properties": {
+            "hasRelic": { "$ref": "#/$defs/id" }
+          }
+        }
+      ]
+    },
+    "effect": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "path", "value"],
+          "properties": {
+            "type": { "const": "set" },
+            "path": { "type": "string", "minLength": 1 },
+            "value": { "type": ["boolean", "number", "string", "null"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "path", "amount"],
+          "properties": {
+            "type": { "const": "increment" },
+            "path": { "type": "string", "minLength": 1 },
+            "amount": { "type": "integer" },
+            "minimum": { "type": "integer" },
+            "maximum": { "type": "integer" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "relic"],
+          "properties": {
+            "type": { "const": "addRelic" },
+            "relic": { "$ref": "#/$defs/relic" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "relicId"],
+          "properties": {
+            "type": { "const": "removeRelic" },
+            "relicId": { "$ref": "#/$defs/id" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": { "const": "checkpoint" },
+            "label": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "target", "kind"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "target": { "$ref": "#/$defs/id" },
+        "kind": {
+          "enum": [
+            "voice",
+            "parameter",
+            "relationship",
+            "exploration",
+            "tactical",
+            "hinge",
+            "risk",
+            "ending"
+          ]
+        },
+        "visibleIf": { "$ref": "#/$defs/condition" },
+        "enabledIf": { "$ref": "#/$defs/condition" },
+        "effects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effect" }
+        },
+        "feedback": { "type": "string" },
+        "requirementHint": { "type": "string" },
+        "mature": { "type": "boolean", "default": false },
+        "danger": { "enum": ["none", "warned", "lethal"], "default": "none" },
+        "checkpointBefore": { "type": "boolean", "default": false }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "body", "choices"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string" },
+        "act": { "type": "string" },
+        "chapter": { "type": ["integer", "string"] },
+        "body": { "type": "string", "minLength": 1 },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        },
+        "mature": { "type": "boolean", "default": false },
+        "checkpoint": { "type": "boolean", "default": false },
+        "gameOver": { "type": "boolean", "default": false },
+        "onEnter": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effect" }
+        },
+        "choices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/choice" }
+        }
+      }
+    }
+  }
+}

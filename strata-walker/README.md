@@ -55,6 +55,11 @@ strata-walker/
       StrataWalker.tw       # canonical Twee / Harlowe 3.3.7 source
       StrataWalker.html     # self-contained playable build
   tools/                    # local ingestion, scanning, runtime, and build tools
+  handoff/
+    README.md               # current MVP architecture and return-package contract
+    APP_BUILDER_PROMPT.md   # standalone prompt for a production app builder
+    story-format.schema.json # proposed declarative story-data contract
+    story-format.example.json
 ```
 
 ## Build and preview
@@ -67,6 +72,13 @@ Then open `story/twine/StrataWalker.html`, or serve the project directory:
 ```bash
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
+
+## App-engine handoff
+`handoff/APP_BUILDER_PROMPT.md` is a standalone build brief for replacing the temporary
+runtime with a mobile-first TypeScript PWA. The generated, Git-ignored
+`handoff/StrataWalker-Engine-MVP.zip` packages that prompt, the current engine and pilot,
+the proposed JSON schema, and the minimum narrative context. It never includes the private
+source bank.
 
 ## Current production target
 Treat the playable Act 0 as a prototype and keep engine expansion paused. Draft 1 of the

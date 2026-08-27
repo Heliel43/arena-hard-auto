@@ -1,0 +1,2 @@
+# Generated handoff archives are downloadable artifacts, not source files.
+*.zip
