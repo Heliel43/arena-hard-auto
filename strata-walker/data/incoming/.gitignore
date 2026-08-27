@@ -1,0 +1,4 @@
+# Source-bank exports stay local and must never be committed.
+*
+!.gitignore
+!README.md
